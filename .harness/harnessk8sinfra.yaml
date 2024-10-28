@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: harnessk8sinfra
+  identifier: harnessk8sinfra
+  orgIdentifier: default
+  projectIdentifier: default_project
+  environmentRef: harnessdevenv
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: harnessk8sconnector
+    namespace: dev-ns
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
